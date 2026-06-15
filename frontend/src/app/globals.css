@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --color-primary: #1B4332;
+  --color-primary-light: #2D6A4F;
+  --color-accent: #D4A843;
+  --color-accent-light: #E5B954;
+  --color-bg: #F5F1EB;
+  --color-bg-light: #FAFAF7;
+  --color-card: #FFFFFF;
+  --color-text: #1A1A1A;
+  --color-text-muted: #6B7280;
+  --color-border: #E2E0DB;
+  --color-success: #2D6A4F;
+  --color-warning: #B8860B;
+  --color-danger: #9B2226;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Hero gradient matching Lovable */
+.gradient-hero {
+  background: linear-gradient(160deg, #0F2B1E 0%, #1B4332 30%, #2D6A4F 60%, #1B4332 100%);
+}
+
+/* Gold gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D4A843, #E5B954, #D4A843);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold button glow */
+.glow-gold {
+  box-shadow: 0 4px 24px rgba(212, 168, 67, 0.3);
+}
+
+/* Floating orb animation */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Wave shape */
+.wave-separator {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-separator svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 80px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5C5C0;
+  border-radius: 3px;
+}
